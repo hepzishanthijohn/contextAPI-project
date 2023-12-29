@@ -59,12 +59,18 @@ export default function Cart ({showModal, toggle}) {
         </div>
         <div className="flex flex-col gap-4">
           {cartItems.map((item) => (
-            <div className="flex justify-between items-center" key={item.id}>
+            <div className="flex  items-center" key={item.id}>
               <div className="flex gap-4">
                 <img src={item.thumbnail} alt={item.title} className="rounded-md w-24 h-24" />
                 <div className="flex gap-8 justify-center">
                   <h1 className="text-lg font-bold">{item.title}</h1>
                   <p className="text-gray-600">${item.price}</p>
+                  <p className="text-gray-600">Description{item.description}</p>
+                  <p className="text-gray-600">Discount: {item.discountPercentage}</p>
+                  <p className="text-gray-600">Rating: {item.rating}</p>
+                  <p className="text-gray-600">Stock: {item.stock}</p>
+                  <p className="text-gray-600">Brand: {item.brand}</p>
+                  <p className="text-gray-600">Category: {item.category}</p>
                 </div>
               </div>
               <div className="flex gap-4">
